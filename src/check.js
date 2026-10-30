@@ -1,6 +1,7 @@
 // checkHtml(): the library entry point.
 
-import { parseHtml, extractBlocks } from './dom.js';
+import { decodeHTML } from 'entities';
+import { parseHtml, extractBlocks, hasIneffectiveXmlLang } from './dom.js';
 import { parseLang } from './scripts.js';
 import { BUILTIN_IGNORE } from './words.js';
 import { maskNeutral, tokenize, foreignRuns, judgeRun, sameScriptSuspects, BREAK } from './text.js';
@@ -29,6 +30,10 @@ export const DEFAULTS = Object.freeze({
 export function checkHtml(html, options = {}) {
   const o = { ...DEFAULTS, ...stripUndefined(options) };
   if (typeof html !== 'string') throw new TypeError('checkHtml(html): html must be a string');
+  for (const k of ['minWords', 'minChars', 'minReviewWords']) {
+    if (!Number.isInteger(o[k]) || o[k] < 1) throw new RangeError(`checkHtml: ${k} must be a whole number of at least 1`);
+  }
+  if (!Array.isArray(o.ignore)) throw new TypeError('checkHtml: ignore must be an array of strings');
   const ignoreWords = new Set();
   const ignorePhrases = [];
   for (const w of [...(o.builtinIgnore ? BUILTIN_IGNORE : []), ...o.ignore]) {
@@ -56,6 +61,7 @@ export function checkHtml(html, options = {}) {
       wcag: '3.1.1',
       message: missing
         ? 'The <html> element has no lang attribute, so the page language cannot be determined.'
+          + (htmlEl && hasIneffectiveXmlLang(htmlEl) ? ' (xml:lang alone has no effect in HTML; add lang too.)' : '')
           + (baseLang ? ` Checked as ${describeLang(baseLang)} (--lang).` : ' Parts without their own lang were not checked; pass --lang to assume one.')
         : `lang="${htmlLang}" on <html> is not a valid language tag.`
           + (baseLang ? ` Checked as ${describeLang(baseLang)} (--lang).` : ''),
@@ -211,20 +217,29 @@ function sourcePosition(textNode, index, ctx) {
   if (!loc) return { line: 0, column: 0 };
   const raw = ctx.html.slice(loc.startOffset, loc.endOffset);
   let offset = loc.startOffset;
-  const value = textNode.value;
-  if (raw === value) offset += index;
-  else if (!raw.includes('&')) {
-    // Only line endings differ (CRLF in the source, LF in the tree).
+  if (raw === textNode.value) offset += index;
+  else {
+    // Walk the source and the decoded text together: line endings (CRLF in
+    // the source, LF in the tree) and character references differ.
     let i = 0;
     let j = 0;
     while (i < index && j < raw.length) {
-      if (raw[j] === '\r' && raw[j + 1] === '\n') j++;
+      if (raw[j] === '\r' && raw[j + 1] === '\n') { j += 2; i++; continue; }
+      if (raw[j] === '&') {
+        const m = ENTITY_RE.exec(raw.slice(j, j + 40));
+        if (m) {
+          const dec = decodeHTML(m[0]);
+          if (dec !== m[0]) { i += dec.length; j += m[0].length; continue; }
+        }
+      }
       i++; j++;
     }
     offset += j;
   }
   return lineCol(ctx.lines, offset);
 }
+
+const ENTITY_RE = /^&(?:#[xX][\da-fA-F]+;?|#\d+;?|[A-Za-z][A-Za-z\d]*;?)/;
 
 function lineStarts(s) {
   const starts = [0];
@@ -263,14 +278,14 @@ const SKIP_TEXT = new Set(['script', 'style', 'template', 'noscript', 'code', 'k
 function elementText(el) {
   if (el.__lpText !== undefined) return el.__lpText;
   let out = '';
-  const walk = (n) => {
-    for (const c of n.childNodes ?? []) {
-      if (c.nodeName === '#text') out += c.value;
-      else if (c.tagName && !SKIP_TEXT.has(c.tagName) && !c.attrs?.some((a) => a.name === 'lang')) walk(c);
-      else if (c.tagName) out += ' ';
-    }
-  };
-  walk(el);
+  const stack = [...(el.childNodes ?? [])].reverse();
+  while (stack.length) {
+    const c = stack.pop();
+    if (c.nodeName === '#text') out += c.value;
+    else if (c.tagName && !SKIP_TEXT.has(c.tagName) && !c.attrs?.some((a) => a.name === 'lang')) {
+      for (let k = (c.childNodes?.length ?? 0) - 1; k >= 0; k--) stack.push(c.childNodes[k]);
+    } else if (c.tagName) out += ' ';
+  }
   Object.defineProperty(el, '__lpText', { value: out, enumerable: false });
   return out;
 }

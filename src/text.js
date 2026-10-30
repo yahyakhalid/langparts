@@ -11,7 +11,7 @@ import { guessLanguage, wordListHits, francCode } from './guess.js';
 export const BREAK = '';
 
 const URL_RE = /\b(?:https?|ftp|file|mailto|tel):[^\s<>"']+|\bwww\.[^\s<>"']+/giu;
-const EMAIL_RE = /[\p{L}\p{N}._%+-]+@[\p{L}\p{N}-]+(?:\.[\p{L}\p{N}-]+)+/gu;
+const EMAIL_RE = /(?<![\p{L}\p{N}._%+-])[\p{L}\p{N}._%+-]+@[\p{L}\p{N}-]+(?:\.[\p{L}\p{N}-]+)+/gu;
 const PATH_RE = /(?:^|(?<=\s))(?:[A-Za-z]:\\|\\\\|~\/|\.{1,2}\/|\/(?=[\w.-]+\/))[^\s]*/gu;
 const CHUNK_RE = /[^\s]+|/gu;
 const EDGE_PUNCT_RE = /^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu;
@@ -230,6 +230,7 @@ export function sameScriptSuspects(text, tokens, declared, allowed, o) {
 }
 
 function judgeSameScript(own, declared, o) {
+  if (own.length === 0) return null;
   const words = own.filter((t) => t.letters >= 2);
   if (words.length < o.minReviewWords) return null;
   // A Title Case name ("Freedom of the Press Foundation") has no lower-case

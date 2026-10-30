@@ -63,8 +63,12 @@ describe('script tier: Latin inside Arabic', () => {
     assert.deepEqual(run('ar', '<p xml:lang="en" lang="en">This paragraph is declared as English already.</p>'), []);
   });
 
-  test('xml:lang alone is respected', () => {
-    assert.deepEqual(run('ar', '<p xml:lang="en">This paragraph is declared as English with xml:lang only.</p>'), []);
+  test('xml:lang alone on an HTML element has no effect, as in browsers', () => {
+    assert.equal(fails('ar', '<p xml:lang="en">This paragraph is declared as English with xml:lang only.</p>').length, 1);
+  });
+
+  test('namespaced xml:lang in SVG is respected', () => {
+    assert.deepEqual(run('ar', '<svg><title xml:lang="en">A chart of the monthly growth of the project</title></svg>'), []);
   });
 
   test('lang="" means unknown language: not checked', () => {

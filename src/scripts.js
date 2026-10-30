@@ -103,7 +103,20 @@ const TAG_RE = /^(?:[a-z]{2,3}(?:-[a-z]{3}){0,3}|[a-z]{4,8})(?:-[a-z]{4})?(?:-(?
  *   `unknown` is true for "", "und", "zxx", "mul" or private-use tags: we can't say what's expected.
  *   `scripts` is null when we don't know which scripts the language uses.
  */
+const parsedCache = new Map();
+
 export function parseLang(value) {
+  const key = String(value ?? '');
+  let r = parsedCache.get(key);
+  if (!r) {
+    r = Object.freeze(parseLangUncached(key));
+    if (parsedCache.size > 1000) parsedCache.clear();
+    parsedCache.set(key, r);
+  }
+  return r;
+}
+
+function parseLangUncached(value) {
   const tag = String(value ?? '').trim();
   if (tag === '') return { tag, primary: '', scripts: null, valid: true, unknown: true };
   const valid = TAG_RE.test(tag);
@@ -115,7 +128,11 @@ export function parseLang(value) {
     return { tag, primary, scripts: null, valid, unknown: true };
   }
   let scripts = null;
-  const scriptSubtag = parts.slice(1).find((p) => p.length === 4 && /^[a-z]+$/.test(p));
+  // The script subtag comes right after the language (and up to three
+  // 3-letter extlangs); never look into extensions like "ar-u-nu-latn".
+  let k = 1;
+  while (k < parts.length && k <= 3 && /^[a-z]{3}$/.test(parts[k])) k++;
+  const scriptSubtag = parts[k] && /^[a-z]{4}$/.test(parts[k]) ? parts[k] : null;
   if (scriptSubtag && SCRIPT_SUBTAGS[scriptSubtag]) scripts = SCRIPT_SUBTAGS[scriptSubtag];
   else if (LANG_SCRIPTS[primary]) scripts = LANG_SCRIPTS[primary];
   return { tag, primary, scripts, valid, unknown: false };

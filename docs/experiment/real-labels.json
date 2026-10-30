@@ -1084,6 +1084,11 @@
   "class": "text",
   "tier": "fail"
  },
+ "ckb-wiki-kurdistan:4d5e2a5b2ff9": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "review"
+ },
  "ckb-wiki-kurdistan:52c685076942": {
   "label": "tp",
   "class": "attr:title",
@@ -1184,6 +1189,11 @@
   "class": "text",
   "tier": "fail"
  },
+ "en-wiki-arabic:5fbeb498aea3": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
  "en-wiki-arabic:670458709723": {
   "label": "tp",
   "class": "attr-vs-element-lang",
@@ -1233,6 +1243,11 @@
   "label": "tp",
   "class": "text",
   "tier": "fail"
+ },
+ "fa-wiki-github:24f856fa597b": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "review"
  },
  "fa-wiki-github:2b05f1b6cf01": {
   "label": "tp",
@@ -1404,10 +1419,20 @@
   "class": "attr-vs-element-lang",
   "tier": "review"
  },
+ "he-wiki-github:3110b1538dfa": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
  "he-wiki-github:40ab5c40ca69": {
   "label": "fp",
   "class": "technical-term",
   "tier": "fail"
+ },
+ "he-wiki-github:4a12d808f10f": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
  },
  "he-wiki-github:5410767f3f52": {
   "label": "tp",
@@ -1434,6 +1459,11 @@
   "class": "text",
   "tier": "fail"
  },
+ "he-wiki-github:71ee7c5a7350": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
  "he-wiki-github:916aaf9a9907": {
   "label": "tp",
   "class": "attr:title",
@@ -1457,6 +1487,11 @@
  "he-wiki-github:9d1976b51110": {
   "label": "tp",
   "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "he-wiki-github:ab7241c337f0": {
+  "label": "fp",
+  "class": "product-name",
   "tier": "review"
  },
  "he-wiki-github:c04c2ba8e642": {
@@ -1483,6 +1518,11 @@
   "label": "tp",
   "class": "text",
   "tier": "fail"
+ },
+ "ja-wiki-github:0321d761d099": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
  },
  "ja-wiki-github:054f01a94ef7": {
   "label": "tp",
@@ -1514,6 +1554,11 @@
   "class": "attr-vs-element-lang",
   "tier": "review"
  },
+ "ja-wiki-github:2fe6fcb7a08a": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
  "ja-wiki-github:32bf448b4f64": {
   "label": "tp",
   "class": "attr:title",
@@ -1538,6 +1583,11 @@
   "label": "fp",
   "class": "name-of-work",
   "tier": "fail"
+ },
+ "ja-wiki-github:471447db01f3": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
  },
  "ja-wiki-github:4770d7685795": {
   "label": "tp",
@@ -1588,6 +1638,11 @@
   "label": "tp",
   "class": "attr-vs-element-lang",
   "tier": "fail"
+ },
+ "ja-wiki-github:a94a3114ff11": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
  },
  "ja-wiki-github:abc7eae63a16": {
   "label": "tp",

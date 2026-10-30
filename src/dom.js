@@ -9,7 +9,7 @@ import { BREAK } from './text.js';
 /** Never checked: not rendered, not text, or code (WCAG allows technical terms). */
 const SKIP = new Set([
   'script', 'style', 'template', 'noscript', 'iframe', 'object', 'embed', 'canvas',
-  'video', 'audio', 'math', 'textarea', 'meta', 'link', 'base', 'head', 'pre', 'xmp',
+  'video', 'audio', 'math', 'textarea', 'meta', 'link', 'base', 'pre', 'xmp',
   'plaintext', 'listing',
 ]);
 
@@ -38,11 +38,22 @@ function attr(el, name) {
   return a ? a.value : undefined;
 }
 
+const XML_NS = 'http://www.w3.org/XML/1998/namespace';
+
+/**
+ * The element's language declaration. xml:lang counts only where browsers
+ * honour it: as a namespaced attribute (SVG, MathML). On HTML elements in an
+ * HTML document a plain "xml:lang" attribute has no effect.
+ */
 function langAttr(el) {
   const own = attr(el, 'lang');
   if (own !== undefined) return own;
-  const xml = el.attrs?.find((x) => x.name === 'xml:lang' || (x.name === 'lang' && x.prefix === 'xml'));
-  return xml?.value;
+  return el.attrs?.find((x) => x.name === 'lang' && x.namespace === XML_NS)?.value;
+}
+
+/** True when the element has xml:lang but no lang (a common XHTML leftover). */
+export function hasIneffectiveXmlLang(el) {
+  return attr(el, 'lang') === undefined && Boolean(el.attrs?.some((x) => x.name === 'xml:lang' && !x.namespace));
 }
 
 /**
@@ -94,56 +105,65 @@ export function extractBlocks(document, opts) {
     });
   };
 
-  const walk = (node, ctx) => {
-    for (const child of node.childNodes ?? []) {
-      if (child.nodeName === '#text') {
-        if (ctx.svgText) continue;
-        push(child.value, child, ctx);
-        continue;
-      }
-      if (!child.tagName) continue; // comments, doctype
-      const tag = child.tagName.toLowerCase();
-      if (tag === 'head') {
-        // Only the document title is announced.
-        const inner = { ...ctx, ...langCtx(child, ctx) };
-        for (const t of child.childNodes ?? []) {
-          if (t.tagName === 'title') { flush(); walk(t, { ...inner, ...langCtx(t, inner) }); flush(); }
-        }
-        continue;
-      }
-      if (SKIP.has(tag) || attr(child, 'hidden') !== undefined) {
-        if (NEUTRAL_INLINE.has(tag)) space(); else if (!INLINE.has(tag)) flush();
-        continue;
-      }
-      if (tag === 'input' && (attr(child, 'type') ?? '').toLowerCase() === 'hidden') continue;
-      const c = { ...ctx, ...langCtx(child, ctx) };
-      const tr = attr(child, 'translate');
-      if (tr !== undefined) c.translateNo = tr.trim().toLowerCase() === 'no';
-      const inSvg = child.namespaceURI === SVG_NS;
-      if (inSvg && tag === 'svg') c.svgText = true;
-      if (inSvg && (tag === 'title' || tag === 'desc')) c.svgText = false;
+  // One step of the walk. Returns the context for the element's children, or
+  // null when they are not visited. Iterative (explicit stack) so that very
+  // deep documents don't overflow the call stack.
+  const visit = (child, ctx) => {
+    if (child.nodeName === '#text') {
+      if (!ctx.svgText) push(child.value, child, ctx);
+      return null;
+    }
+    if (!child.tagName) return null; // comments, doctype
+    const tag = child.tagName.toLowerCase();
+    if (SKIP.has(tag) || attr(child, 'hidden') !== undefined) {
+      if (NEUTRAL_INLINE.has(tag)) space(); else if (!INLINE.has(tag)) flush();
+      return null;
+    }
+    if (tag === 'input' && (attr(child, 'type') ?? '').toLowerCase() === 'hidden') return null;
+    const c = { ...ctx, ...langCtx(child) };
+    const tr = attr(child, 'translate');
+    if (tr !== undefined) c.translateNo = tr.trim().toLowerCase() === 'no';
+    const inSvg = child.namespaceURI === SVG_NS;
+    // Inside <svg> only <title> and <desc> are read as text (see README),
+    // and HTML inside <foreignObject> is ordinary HTML again.
+    if (inSvg && tag === 'svg') c.svgText = true;
+    if (inSvg && (tag === 'title' || tag === 'desc' || tag === 'foreignobject')) c.svgText = false;
 
-      // Attributes are announced as names or descriptions.
-      for (const name of NAME_ATTRS) {
-        const v = attr(child, name);
-        if (v === undefined) continue;
-        if (name === 'title' && (tag === 'link' || tag === 'style' || tag === 'html' || tag === 'abbr')) continue;
-        addAttr(child, name, v, c);
-      }
-      if (tag === 'input' && BUTTON_INPUTS.has((attr(child, 'type') ?? '').toLowerCase())) {
-        addAttr(child, 'value', attr(child, 'value'), c);
-      }
+    // Attributes are announced as names or descriptions.
+    for (const name of NAME_ATTRS) {
+      const v = attr(child, name);
+      if (v === undefined) continue;
+      if (name === 'title' && (tag === 'link' || tag === 'style' || tag === 'html' || tag === 'abbr')) continue;
+      addAttr(child, name, v, c);
+    }
+    if (tag === 'input' && BUTTON_INPUTS.has((attr(child, 'type') ?? '').toLowerCase())) {
+      addAttr(child, 'value', attr(child, 'value'), c);
+    }
 
-      if (NEUTRAL_INLINE.has(tag)) { space(); continue; }
-      const inline = INLINE.has(tag) && !(inSvg && (tag === 'title' || tag === 'desc'));
-      if (tag === 'br' || tag === 'wbr' || tag === 'img') { space(); continue; }
-      if (!inline) flush(); else space();
-      walk(child, c);
-      if (!inline) flush(); else space();
+    if (NEUTRAL_INLINE.has(tag)) { space(); return null; }
+    if (tag === 'br' || tag === 'wbr' || tag === 'img') { space(); return null; }
+    const inline = INLINE.has(tag) && !(inSvg && (tag === 'title' || tag === 'desc'));
+    if (!inline) flush(); else space();
+    return { ctx: c, after: inline ? space : flush };
+  };
+
+  const walk = (rootNode, rootCtx) => {
+    const stack = [{ node: rootNode, ctx: rootCtx, i: 0, after: null }];
+    while (stack.length) {
+      const fr = stack[stack.length - 1];
+      const kids = fr.node.childNodes ?? [];
+      if (fr.i >= kids.length) {
+        stack.pop();
+        fr.after?.();
+        continue;
+      }
+      const child = kids[fr.i++];
+      const r = visit(child, fr.ctx);
+      if (r) stack.push({ node: child, ctx: r.ctx, i: 0, after: r.after });
     }
   };
 
-  const langCtx = (el, ctx) => {
+  const langCtx = (el) => {
     const v = langAttr(el);
     if (v === undefined) return {};
     return { lang: parseLang(v) };

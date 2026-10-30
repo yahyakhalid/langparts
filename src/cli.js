@@ -128,7 +128,7 @@ export async function main(argv, io = {}) {
     try { st = await stat(abs); } catch { /* not a path: maybe a glob */ }
     if (st?.isDirectory()) {
       const files = await walk(abs);
-      if (files.length === 0) stderr.write(`langparts: no HTML files in ${arg}\n`);
+      if (files.length === 0) { stderr.write(`langparts: no HTML files in ${arg}\n`); inputErrors++; }
       for (const f of files) inputs.push({ kind: 'file', path: f, name: rel(cwd, f) });
     } else if (st?.isFile()) {
       inputs.push({ kind: 'file', path: abs, name: rel(cwd, abs) });
@@ -212,9 +212,11 @@ export async function glob(pattern, cwd) {
   const baseRel = segs.slice(0, firstGlob).join('/');
   const base = resolve(cwd, baseRel || '.');
   const re = globToRegExp(segs.slice(firstGlob).join('/'));
+  // "site/**" means the HTML files in site/; "**/*.php" means what it says.
+  const onlyHtml = !segs[segs.length - 1].includes('.');
   let files;
   try { files = await walkAll(base); } catch { return []; }
-  return files.filter((f) => re.test(relative(base, f).split(sep).join('/')));
+  return files.filter((f) => re.test(relative(base, f).split(sep).join('/')) && (!onlyHtml || HTML_EXT.test(f)));
 }
 
 async function walkAll(dir) {
@@ -244,7 +246,7 @@ export function globToRegExp(g) {
     } else if (c === '{') {
       const end = g.indexOf('}', i + 1);
       if (end === -1) re += '\\{';
-      else { re += `(?:${g.slice(i + 1, end).split(',').map((s) => s.replace(/[.+^$()|\\]/g, '\\$&').replace(/\*/g, '[^/]*')).join('|')})`; i = end; }
+      else { re += `(?:${g.slice(i + 1, end).split(',').map((s) => s.replace(/[.+^$()|\\]/g, '\\$&').replace(/\*/g, '[^/]*').replace(/\?/g, '[^/]')).join('|')})`; i = end; }
     } else re += c.replace(/[.+^$()|\\]/g, '\\$&');
   }
   return new RegExp(`^${re}$`);
@@ -261,6 +263,10 @@ export function decode(buf, headerCharset) {
   if (!charset) {
     const head = new TextDecoder('latin1').decode(bytes.subarray(0, 1024));
     charset = head.match(/<meta[^>]+charset\s*=\s*["']?\s*([\w-]+)/i)?.[1] ?? null;
+    // WHATWG prescan: a UTF-16 label in a <meta> means UTF-8 (the bytes were
+    // readable as ASCII), and x-user-defined means windows-1252.
+    if (charset && /^utf-16/i.test(charset)) charset = 'utf-8';
+    if (charset && /^x-user-defined$/i.test(charset)) charset = 'windows-1252';
   }
   try {
     return new TextDecoder(charset ?? 'utf-8').decode(bytes);
@@ -286,6 +292,9 @@ async function fetchHtml(url, doFetch) {
 
 // ------------------------------------------------------------------ output
 
+/** Page text must not reach the terminal as control sequences. */
+const safe = (s) => String(s ?? '').replace(/[\u0000-\u0008\u000b-\u001f\u007f-\u009f\u2028\u2029]/g, (ch) => `\\x${ch.charCodeAt(0).toString(16).padStart(2, '0')}`);
+
 export function formatHuman(results, { color, fails, reviews }) {
   const c = (code) => (s) => (color ? `\x1b[${code}m${s}\x1b[0m` : s);
   const red = c('31;1');
@@ -299,16 +308,17 @@ export function formatHuman(results, { color, fails, reviews }) {
   for (const r of results) {
     if (r.error) continue;
     if (r.findings.length === 0) { clean++; continue; }
-    const lang = r.documentLang ? `lang="${r.documentLang}"` : 'no lang';
-    out += `\n${bold(r.file)} ${dim(`(${lang}${r.assumedLang ? `, checked as ${r.assumedLang}` : ''})`)}\n`;
+    const lang = r.documentLang ? `lang="${safe(r.documentLang)}"` : 'no lang';
+    out += `\n${bold(safe(r.file))} ${dim(`(${lang}${r.assumedLang ? `, checked as ${safe(r.assumedLang)}` : ''})`)}\n`;
     for (const f of r.findings) {
       const pos = `${f.line}:${f.column}`.padEnd(8);
       const sev = f.severity === 'fail' ? red('✖ fail  ') : yellow('⚠ review');
-      out += `  ${dim(pos)}${sev}  ${f.message}\n`;
+      out += `  ${dim(pos)}${sev}  ${safe(f.message)}\n`;
       const pad = ' '.repeat(20);
-      if (f.text) out += `${pad}${bold(`"${f.text.length > 100 ? `${f.text.slice(0, 99)}…` : f.text}"`)}\n`;
-      out += `${pad}${dim(`at ${f.selector}${f.attribute ? ` [${f.attribute}]` : ''}`)}\n`;
-      out += `${pad}${cyan(`fix: ${f.fix}`)}\n`;
+      const text = safe(f.text);
+      if (text) out += `${pad}${bold(`"${text.length > 100 ? `${text.slice(0, 99)}…` : text}"`)}\n`;
+      out += `${pad}${dim(`at ${safe(f.selector)}${f.attribute ? ` [${f.attribute}]` : ''}`)}\n`;
+      out += `${pad}${cyan(`fix: ${safe(f.fix)}`)}\n`;
     }
   }
   const files = results.length;

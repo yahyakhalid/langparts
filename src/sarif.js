@@ -1,5 +1,8 @@
 // SARIF 2.1.0 output, for GitHub code scanning and other tools.
 
+import { pathToFileURL } from 'node:url';
+import { isAbsolute } from 'node:path';
+
 const RULES = [
   {
     id: 'foreign-script',
@@ -40,7 +43,7 @@ export function toSarif(results, opts = {}) {
   const index = new Map(RULES.map((r, i) => [r.id, i]));
   const out = [];
   for (const r of results) {
-    const uri = /^[a-z][a-z\d+.-]*:\/\//i.test(r.file) ? r.file : r.file.replace(/\\/g, '/').replace(/^\.\//, '');
+    const uri = toUri(r.file);
     for (const f of r.findings) {
       const text = f.text ? `${f.message} Text: "${f.text}". Suggested fix: ${f.fix}` : `${f.message} Suggested fix: ${f.fix}`;
       out.push({
@@ -78,6 +81,13 @@ export function toSarif(results, opts = {}) {
       results: out,
     }],
   };
+}
+
+/** A valid URI: URLs as they are, absolute paths as file: URLs, relative paths percent-encoded. */
+function toUri(file) {
+  if (/^[a-z][a-z\d+.-]*:\/\//i.test(file)) return file;
+  if (isAbsolute(file) || /^[A-Za-z]:[\\/]/.test(file)) return pathToFileURL(file).href;
+  return file.replace(/\\/g, '/').replace(/^\.\//, '').split('/').map(encodeURIComponent).join('/');
 }
 
 /** Small stable hash (FNV-1a, 32 bit) so code scanning can track a finding across runs. */

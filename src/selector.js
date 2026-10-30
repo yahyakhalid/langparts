@@ -8,7 +8,8 @@ export function selectorFor(el, cache = new Map()) {
   if (cache.has(el)) return cache.get(el);
   const parts = [];
   for (let n = el; n && n.tagName; n = n.parentNode) {
-    const tag = n.tagName.toLowerCase();
+    // SVG and MathML type selectors are case-sensitive (foreignObject).
+    const tag = n.namespaceURI && n.namespaceURI !== 'http://www.w3.org/1999/xhtml' ? n.tagName : n.tagName.toLowerCase();
     const id = n.attrs?.find((a) => a.name === 'id')?.value;
     if (id && ID_RE.test(id)) { parts.unshift(`${tag}#${id}`); break; }
     if (tag === 'html') { parts.unshift('html'); break; }

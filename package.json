@@ -60,6 +60,7 @@
     "bench": "node scripts/bench.mjs"
   },
   "dependencies": {
+    "entities": "^8.1.0",
     "franc": "^6.2.0",
     "parse5": "^8.0.1"
   }
