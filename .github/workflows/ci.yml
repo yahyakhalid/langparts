@@ -46,4 +46,4 @@ jobs:
           fail-on: none
           sarif: langparts.sarif
       - name: SARIF was written
-        run: node -e "const s=require('./langparts.sarif'); if (s.version !== '2.1.0' || s.runs[0].results.length !== 7) process.exit(1)"
+        run: node -e "const s=JSON.parse(require('fs').readFileSync('langparts.sarif','utf8')); if (s.version !== '2.1.0' || s.runs[0].results.length !== 7) process.exit(1)"
