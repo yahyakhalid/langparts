@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>صفحة بلا لغة</title>
+</head>
+<body data-expect="missing-document-lang" data-case="nolang-html" data-class="document">
+  <p>هذه الصفحة لا تحدد لغتها في عنصر html، فلا يعرف قارئ الشاشة بأي لغة ينطقها.</p>
+  <p lang="en" data-expect="none" data-case="nolang-tagged" data-class="tagged">This paragraph declares its own language, so it can still be checked.</p>
+  <div lang="en"><p data-expect="fail" data-case="nolang-inner-fail" data-class="sentence">Inside an English part: مرحباً بكم جميعاً في موقعنا الجديد هذا الأسبوع.</p></div>
+</body>
+</html>

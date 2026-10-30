@@ -1,0 +1,25 @@
+{
+  "fetched": "2026-10-30",
+  "note": "Page bodies are fetched into .cache/real/ and are not committed. Pages change over time, so a re-run may give different numbers.",
+  "pages": [
+    { "id": "ar-wiki-github", "lang": "ar", "kind": "Wikipedia article full of product names", "url": "https://ar.wikipedia.org/wiki/%D8%BA%D9%8A%D8%AA_%D9%87%D8%A7%D8%A8" },
+    { "id": "ar-wiki-python", "lang": "ar", "kind": "Wikipedia article on a programming language", "url": "https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86_(%D9%84%D8%BA%D8%A9_%D8%A8%D8%B1%D9%85%D8%AC%D8%A9)" },
+    { "id": "ar-wiki-iphone", "lang": "ar", "kind": "Wikipedia article on a product line", "url": "https://ar.wikipedia.org/wiki/%D8%A2%D9%8A%D9%81%D9%88%D9%86" },
+    { "id": "ar-bbc", "lang": "ar", "kind": "news home page", "url": "https://www.bbc.com/arabic" },
+    { "id": "ar-aljazeera", "lang": "ar", "kind": "news home page", "url": "https://www.aljazeera.net/" },
+    { "id": "ar-un", "lang": "ar", "kind": "intergovernmental home page", "url": "https://www.un.org/ar/" },
+    { "id": "ar-who", "lang": "ar", "kind": "intergovernmental home page", "url": "https://www.who.int/ar" },
+    { "id": "ar-moh-sa", "lang": "ar-sa", "kind": "government home page", "url": "https://www.moh.gov.sa/Pages/Default.aspx" },
+    { "id": "ar-qatar-hukoomi", "lang": "ar", "kind": "government portal", "url": "https://hukoomi.gov.qa/ar" },
+    { "id": "fr-canada-home", "lang": "fr", "kind": "bilingual government home page", "url": "https://www.canada.ca/fr.html" },
+    { "id": "fr-canada-ei", "lang": "fr", "kind": "bilingual government service page", "url": "https://www.canada.ca/fr/services/prestations/ae.html" },
+    { "id": "en-canada-home", "lang": "en", "kind": "bilingual government home page", "url": "https://www.canada.ca/en.html" },
+    { "id": "fr-wiki-github", "lang": "fr", "kind": "Wikipedia article", "url": "https://fr.wikipedia.org/wiki/GitHub" },
+    { "id": "fa-wiki-github", "lang": "fa", "kind": "Wikipedia article", "url": "https://fa.wikipedia.org/wiki/%DA%AF%DB%8C%D8%AA%E2%80%8C%D9%87%D8%A7%D8%A8" },
+    { "id": "ckb-wiki-kurdistan", "lang": "ckb", "kind": "Wikipedia article", "url": "https://ckb.wikipedia.org/wiki/%DA%A9%D9%88%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86" },
+    { "id": "he-wiki-github", "lang": "he", "kind": "Wikipedia article", "url": "https://he.wikipedia.org/wiki/GitHub" },
+    { "id": "ru-wiki-github", "lang": "ru", "kind": "Wikipedia article", "url": "https://ru.wikipedia.org/wiki/GitHub" },
+    { "id": "ja-wiki-github", "lang": "ja", "kind": "Wikipedia article", "url": "https://ja.wikipedia.org/wiki/GitHub" },
+    { "id": "en-wiki-arabic", "lang": "en", "kind": "Wikipedia article about a language, full of Arabic script", "url": "https://en.wikipedia.org/wiki/Arabic" }
+  ]
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Demander une prestation – Services en ligne</title>
+</head>
+<body>
+<header>
+  <a href="#contenu" aria-label="Skip to main content" data-expect="review" data-case="fr-aria-skip" data-class="aria-label">Passer au contenu principal</a>
+  <a href="/en/benefits" lang="en" data-expect="none" data-case="fr-lang-switch" data-class="tagged">English</a>
+  <a href="/compte" aria-label="Sign in to your account" data-expect="review" data-case="fr-aria-signin" data-class="aria-label">Se connecter</a>
+</header>
+<main id="contenu">
+  <h1>Demander une prestation</h1>
+  <p>
+    Vous pouvez présenter votre demande en ligne, par téléphone ou en personne dans un
+    bureau de <span data-expect="none" data-case="fr-name-1" data-class="name">Service Canada</span>.
+    Le traitement prend habituellement de quatre à six semaines.
+  </p>
+  <p>
+    Pour suivre votre dossier, utilisez l'application mobile disponible sur
+    <span data-expect="none" data-case="fr-brand-1" data-class="brand">Google Play</span> et
+    l'<span data-expect="none" data-case="fr-brand-2" data-class="brand">App Store</span>,
+    ou connectez-vous avec votre compte <span data-expect="none" data-case="fr-brand-3" data-class="brand">GCKey</span>.
+  </p>
+  <p>
+    Pendant le <span data-expect="none" data-case="fr-loan-1" data-class="loanword">week-end</span>, le centre d'appels est fermé,
+    mais vous pouvez envoyer un <span data-expect="none" data-case="fr-loan-2" data-class="loanword">email</span>
+    ou consulter la foire aux questions. Notre équipe de <span data-expect="none" data-case="fr-loan-3" data-class="loanword">marketing digital</span>
+    publie aussi des conseils chaque mois.
+  </p>
+  <p data-expect="review" data-case="fr-en-paragraph" data-class="sentence">
+    Applications submitted after the deadline will be reviewed in the order they are received, and you will be notified by mail once a decision has been made.
+  </p>
+  <p>
+    <span lang="en" data-expect="none" data-case="fr-tagged" data-class="tagged">This page is also available in English.</span>
+    Cette page est aussi offerte en anglais.
+  </p>
+  <p data-expect="fail" data-case="fr-ar-sentence" data-class="sentence">
+    Information en arabe : يمكنكم تقديم الطلب عبر الإنترنت أو عبر الهاتف أو في أحد مكاتبنا.
+  </p>
+  <ul>
+    <li><a href="/admissibilite">Vérifier votre admissibilité</a></li>
+    <li data-expect="review" data-case="fr-en-link" data-class="link-text"><a href="/apply">Read more about how to apply for the program</a></li>
+    <li><a href="/documents">Documents requis</a></li>
+  </ul>
+  <p>
+    Le ministre <span data-expect="none" data-case="fr-name-2" data-class="name">John Smith</span> a annoncé la mesure
+    le 3 mars, en présence de représentants de <span data-expect="none" data-case="fr-name-3" data-class="name">Statistics Canada</span>.
+  </p>
+  <img src="bureau.jpg" alt="Une agente aide un citoyen à remplir le formulaire">
+  <img src="map.png" alt="Map of the office locations in the province" data-expect="review" data-case="fr-en-alt" data-class="alt">
+  <form>
+    <label for="nas">Numéro d'assurance sociale</label>
+    <input id="nas" placeholder="Enter your social insurance number" data-expect="review" data-case="fr-en-placeholder" data-class="placeholder">
+    <button type="submit">Envoyer la demande</button>
+  </form>
+</main>
+<footer>
+  <p>© Gouvernement du Canada. Date de modification : 2026-10-14.</p>
+</footer>
+</body>
+</html>

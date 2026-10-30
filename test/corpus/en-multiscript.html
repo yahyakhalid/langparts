@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome page for international students</title>
+</head>
+<body>
+<main>
+  <h1>Welcome, international students</h1>
+  <p>
+    We are glad you chose to study with us. This page explains how to register,
+    where to find housing and how to reach the student office.
+  </p>
+  <p data-expect="fail" data-case="en-ar-sentence" data-class="sentence">
+    For our Arabic-speaking students: مرحباً بكم في الجامعة، نتمنى لكم سنة دراسية موفقة.
+  </p>
+  <p>
+    <span lang="ar" data-expect="none" data-case="en-ar-tagged" data-class="tagged">أهلاً وسهلاً بكم في الحرم الجامعي</span> is the greeting you will see at the main gate.
+  </p>
+  <p>
+    The campus is named after the poet <span data-expect="none" data-case="en-ar-name-1" data-class="name">المتنبي</span>,
+    and the library holds a copy of <span data-expect="any" data-case="en-ar-name-2" data-class="name">ألف ليلة وليلة</span>.
+  </p>
+  <p data-expect="fail" data-case="en-he-sentence" data-class="sentence">
+    The Hebrew welcome message reads: ברוכים הבאים לאוניברסיטה שלנו, אנחנו שמחים שבחרתם בנו.
+  </p>
+  <p data-expect="fail" data-case="en-ru-sentence" data-class="sentence">
+    Russian: Добро пожаловать в наш университет, мы рады видеть вас здесь.
+  </p>
+  <p data-expect="fail" data-case="en-zh-sentence" data-class="sentence">
+    Chinese: 欢迎来到我们的大学，祝你学习愉快。
+  </p>
+  <p data-expect="fail" data-case="en-ja-sentence" data-class="sentence">
+    Japanese: 私たちの大学へようこそ。楽しい一年になりますように。
+  </p>
+  <p data-expect="fail" data-case="en-ko-sentence" data-class="sentence">
+    Korean: 우리 대학교에 오신 것을 환영합니다. 즐거운 한 해 되세요.
+  </p>
+  <p data-expect="fail" data-case="en-el-sentence" data-class="sentence">
+    Greek: Καλώς ήρθατε στο πανεπιστήμιό μας, σας ευχόμαστε καλή χρονιά.
+  </p>
+  <p data-expect="fail" data-case="en-hi-sentence" data-class="sentence">
+    Hindi: हमारे विश्वविद्यालय में आपका स्वागत है, आपका साल शुभ हो।
+  </p>
+  <p data-expect="fail" data-case="en-th-sentence" data-class="sentence">
+    Thai: ยินดีต้อนรับสู่มหาวิทยาลัยของเรา ขอให้มีความสุขตลอดปี
+  </p>
+  <p>
+    Our partner universities are in <span data-expect="none" data-case="en-zh-name" data-class="name">北京</span>,
+    <span data-expect="none" data-case="en-ja-name" data-class="name">東京</span> and
+    <span data-expect="none" data-case="en-ru-name" data-class="name">Москва</span>.
+  </p>
+  <p>
+    In the physics course you will meet <span data-expect="none" data-case="en-greek-math-1" data-class="technical">π</span>,
+    <span data-expect="none" data-case="en-greek-math-2" data-class="technical">Δx</span> and the
+    <span data-expect="none" data-case="en-greek-math-3" data-class="technical">α-helix</span> in biology.
+    Fees are listed in € and ¥ on the finance page. 🎓 ✨
+  </p>
+  <nav>
+    <a href="/ar" lang="ar" data-expect="none" data-case="en-lang-switch-ar" data-class="tagged">العربية</a>
+    <a href="/fa" data-expect="none" data-case="en-lang-switch-fa" data-class="name">فارسی</a>
+    <a href="/zh" data-expect="none" data-case="en-lang-switch-zh" data-class="name">中文</a>
+    <a href="/he" hreflang="he" data-expect="none" data-case="en-lang-switch-he" data-class="name">עברית</a>
+  </nav>
+  <img src="gate.jpg" alt="بوابة الجامعة الرئيسية في الصباح الباكر" data-expect="fail" data-case="en-ar-alt" data-class="alt">
+  <button aria-label="Закрыть окно с сообщением" data-expect="fail" data-case="en-ru-aria" data-class="aria-label">×</button>
+</main>
+</body>
+</html>

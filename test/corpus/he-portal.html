@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>פורטל השירותים הדיגיטליים</title>
+</head>
+<body>
+<main>
+  <h1>ברוכים הבאים לפורטל השירותים</h1>
+  <p>
+    ניתן להתחבר באמצעות <span data-expect="none" data-case="he-brand-1" data-class="brand">Google</span> או
+    <span data-expect="none" data-case="he-brand-2" data-class="brand">Microsoft 365</span>, ולקבל עדכונים ב-<span data-expect="none" data-case="he-brand-3" data-class="brand">WhatsApp</span>.
+  </p>
+  <p data-expect="fail" data-case="he-en-sentence" data-class="sentence">
+    הודעה למשתמשים: The service will be unavailable on Sunday night because of planned maintenance.
+  </p>
+  <p data-expect="fail" data-case="he-ar-sentence" data-class="sentence">
+    מידע בערבית: يمكنكم الحصول على الخدمة باللغة العربية من خلال مركز الاتصال.
+  </p>
+  <a href="/help" aria-label="Contact the help desk by phone" data-expect="fail" data-case="he-aria" data-class="aria-label">עזרה</a>
+</main>
+</body>
+</html>
