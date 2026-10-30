@@ -1,0 +1,66 @@
+{
+  "name": "langparts",
+  "version": "0.1.0",
+  "description": "Find text in another language that has no lang attribute (WCAG 2.x SC 3.1.2 Language of Parts): English in an Arabic page, Arabic in an English page, and more. CLI, library, SARIF for GitHub code scanning.",
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "wcag21",
+    "wcag22",
+    "language-of-parts",
+    "lang",
+    "screen-reader",
+    "i18n",
+    "multilingual",
+    "arabic",
+    "rtl",
+    "sarif",
+    "linter",
+    "html"
+  ],
+  "homepage": "https://github.com/yahyakhalid/langparts#readme",
+  "bugs": {
+    "url": "https://github.com/yahyakhalid/langparts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yahyakhalid/langparts.git"
+  },
+  "license": "MIT",
+  "author": "Yahya Khalid (https://github.com/yahyakhalid)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
+  "bin": {
+    "langparts": "bin/langparts.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "index.d.ts",
+    "README.md",
+    "README.ar.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "test": "node --test",
+    "experiment": "node scripts/experiment.mjs",
+    "bench": "node scripts/bench.mjs"
+  },
+  "dependencies": {
+    "franc": "^6.2.0",
+    "parse5": "^8.0.1"
+  }
+}

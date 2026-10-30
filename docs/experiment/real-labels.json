@@ -1,0 +1,1667 @@
+{
+ "ar-aljazeera:02ed0a72b069": {
+  "label": "fp",
+  "class": "identifier",
+  "tier": "review"
+ },
+ "ar-aljazeera:15b9376cfadf": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-aljazeera:22bdab6323e9": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:284df3befbff": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-aljazeera:2984f19ea5df": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-aljazeera:2c1dc7962b99": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:33a150510dd2": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:41d689e89555": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:425a16bb0594": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-aljazeera:42d45249bd46": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:4a0e38775452": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:5650df129c38": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-aljazeera:57fd80e2b3b1": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:64131fded43c": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:681bad449cf1": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:6970d7f2f692": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:6ace82faf03a": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:7286b7f0da94": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:85d753b4d96c": {
+  "label": "fp",
+  "class": "identifier",
+  "tier": "review"
+ },
+ "ar-aljazeera:860d5d8fec99": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:99a241a9b28f": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:9b9bf9646fd7": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:9c1c0759ea69": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:a5420a4bce1c": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:ad8f16562dff": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:ae3b6fb0aa83": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-aljazeera:b425cf3f8ed9": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:d0f90d92ac20": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-aljazeera:d1b3f5095a5a": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:dbcae320d388": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:e7dde031f910": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-aljazeera:edb8c2959df9": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-bbc:3878105f8027": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-bbc:817e33dcccbe": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-bbc:91bab552d869": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-bbc:e3bd36f0921d": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-bbc:e4a3af32e568": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:2ed4b9274ede": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:3b5bcc52bb89": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:4503e0ab41b6": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:48ce263830dc": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:51bbf67f3a98": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:a24099c2110e": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:d787a8efe069": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:d963bdc5bcd7": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-moh-sa:dac2313b01cc": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ar-qatar-hukoomi:112c4d696e57": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-qatar-hukoomi:3f0b850d83c7": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-qatar-hukoomi:6438bf5528f1": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-qatar-hukoomi:ad60df655ee3": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-un:0796de6be4d4": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-un:0e45c60fe42d": {
+  "label": "fp",
+  "class": "name-of-work",
+  "tier": "fail"
+ },
+ "ar-un:1d13ed01c0dd": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:21e718960d87": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:28e1c4e4d26c": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:3795f01c6126": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:37f1de70e8ec": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:5d7c87fcc05e": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:8ea034883a73": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-un:9555e6650860": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:97e10a44166f": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:a19a23bba4df": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-un:bcdfdb4abf5f": {
+  "label": "tp",
+  "class": "attr:alt",
+  "tier": "fail"
+ },
+ "ar-un:ea4936ca0a32": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-un:f1f2a3a1ffd3": {
+  "label": "fp",
+  "class": "name-of-work",
+  "tier": "fail"
+ },
+ "ar-who:3b7792d468c5": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-who:57c6892d8e49": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-who:69766682fd5f": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-who:8a65c3c7d1f4": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-who:8db38e1f81b0": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-who:c4fca402ca58": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:07e2b6796c7c": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:11645f9665ef": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:1dfc48a5eb52": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-wiki-github:1fc7925475c5": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:200cf9325cb6": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:20ec1fec4fbf": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:210e154dbcba": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:23e4c27e4e67": {
+  "label": "fp",
+  "class": "product-name",
+  "tier": "review"
+ },
+ "ar-wiki-github:2f2015c27b64": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:3479c5a4d034": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:3942cbd62b85": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:41210dfc33d0": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:4dab259d492e": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:4dec748a568d": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-github:51b8f58c09ae": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:56657d97b424": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:59ffd4cbf93c": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:636d14831d19": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:670ac2a6d030": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-github:75dff09250ba": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:827a0bec402e": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:968aaad688a4": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:993d09d59112": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:9b65586795f1": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-github:a2f91c16fb75": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:ae7934980faf": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-github:b7dde482e820": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:b9de67e1beb1": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:c9fab5f4b335": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-github:cf7ebb134ab8": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:d1a5e13b44b0": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-wiki-github:d71747c775f3": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:ddc9b890df76": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-github:df5bfb5dfd90": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-github:e045c17a393d": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-github:ecf89f975a43": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-wiki-github:f99df204a70e": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-github:ffcba205f6d4": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:04284e46ccc2": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:0765aab6eaad": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:076bb58b93fb": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:15f36238f946": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:1b00f7893e85": {
+  "label": "tp",
+  "class": "text",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:1efefd58d132": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:24322df2fa3f": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:25ab6721271a": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:262900bbfd74": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:2ce0c8af7fe2": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:2f1ab574c979": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:334692535b7b": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:3c1b51687052": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:40bc59faed65": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:423fd7e2288a": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:42fe3a89b9ab": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:4ab1b033d2d9": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:538a97590eb3": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:56c4d262c121": {
+  "label": "tp",
+  "class": "text",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:574aae6b787f": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:5c6628d2a7cc": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:61bc76d55066": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:631e47262ebc": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:65d2e50235c6": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:66dc9f7a075f": {
+  "label": "tp",
+  "class": "text",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:6c8889d78102": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:6d6e9e2baa5a": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:733b64f7069e": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:7ab32b12b924": {
+  "label": "tp",
+  "class": "text",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:7fad60032173": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:87a91b902505": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:8c0c91227410": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:93eccdb3ca72": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:9401daf574b8": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:96f5c7918296": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:9d4c201c4cd9": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:9eb7498c8553": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:ba72a6733bdd": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:c1f50231abbf": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:c20ad207f881": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:c54e52b5aaf1": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:d0425976ea13": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:d1a84d9099a8": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:d442a7d23908": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:d94a7e93d624": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:da2a1aade795": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:dbd0256019b5": {
+  "label": "tp",
+  "class": "text",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:dc19d98efb0c": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:df39b3229297": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:e2c0f6d00b4f": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:e31c7844cfc0": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:e4aa14af1301": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:e80e4b6453d5": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:e9ce9fac22f0": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-iphone:eda6fd67a3af": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:f97f2419690a": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-iphone:fc2c8262bb57": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:0d260a643329": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:0eeb4c3450fa": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:1c8b73f72585": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:232ce57850cb": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:23686223a12f": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:3885ac17b685": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ar-wiki-python:3cbecd1dfa1d": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:3d512df0a9fe": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:3e9688208388": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:513a7a1ae866": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ar-wiki-python:64136cb657ab": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-wiki-python:72b8dafc4f91": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:7a37277264f4": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:7ca2f849d87c": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:7d2db42d2708": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:7f9d18fc5a9f": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:80625ae0df7d": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:885f53738c6c": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:8c11faecca0e": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:8f2c28b9a8fb": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:9e2ce49ae60d": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:9fe8ae4b93a2": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:a53fbd3a361c": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:a71e881abaa3": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:ae18e27e8db5": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ar-wiki-python:b6327be4aab0": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ar-wiki-python:b8b41a2d6d07": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:c088979e6a48": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:c54004225053": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-wiki-python:c960ecda40dd": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:ca8a2bdbf298": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:ccb5e7663cab": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:cf4754900f1b": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ar-wiki-python:cfb3279f71d1": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "review"
+ },
+ "ar-wiki-python:dd0ceaa2a869": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:df7126dd7d64": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ar-wiki-python:ef0c125f0e21": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ar-wiki-python:f004c2f0dbf7": {
+  "label": "fp",
+  "class": "product-name",
+  "tier": "fail"
+ },
+ "ar-wiki-python:ff4405ac6d8c": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:08575bb96ca0": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:08b1c394238d": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:1a43791bfdf4": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:1e734f7517b0": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:1eb1605903b8": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:1ff38ed5a6f0": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:24f856fa597b": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "review"
+ },
+ "ckb-wiki-kurdistan:35494f2bede3": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:3b2030836a29": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:3c138a02c3a7": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:438555a2b3b1": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:4ad8dc9137f3": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:52c685076942": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:53686638d126": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:5981ee78451c": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:649e9cecf1fb": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:78dd2df25152": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:85f78d3382fc": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:93dba7ce8289": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:9c9a7f0b08b1": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:9e4ccb3de975": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:a51ed8aa3e0e": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "review"
+ },
+ "ckb-wiki-kurdistan:a5dd7dd20819": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:a6e6647369df": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:ab21ec3f9441": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:b628700406ad": {
+  "label": "fp",
+  "class": "transliterated-name",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:df25d9519174": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:dfb59736726b": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:e43042100bc1": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ckb-wiki-kurdistan:e62e619be0f0": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "en-wiki-arabic:02c4460f2593": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "en-wiki-arabic:23ec643a1114": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "en-wiki-arabic:670458709723": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "en-wiki-arabic:80b099092a4c": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "en-wiki-arabic:864a52e15a91": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "en-wiki-arabic:9fddf54a016c": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "en-wiki-arabic:bd4461872f51": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "en-wiki-arabic:e5191f3182a2": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "en-wiki-arabic:eb6a5d806f86": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:035ca5846ccb": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:097eb4f2744c": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "fa-wiki-github:0ea11cf53174": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "fa-wiki-github:2b05f1b6cf01": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:48e1ea74c1ef": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:4a1d9544bd35": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:557b485b79f3": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:639c3a669653": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:679390036669": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:68e4af2093a6": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:697117e26959": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:6d1cb94f1dab": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "fa-wiki-github:6f161c2441e1": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "fa-wiki-github:8761af8cd939": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "fa-wiki-github:91c8a1f45733": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:932c4d8c8761": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:978bc17e20fb": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:9e2b64af6df7": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "review"
+ },
+ "fa-wiki-github:a2b04c925de5": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:a4f3a827232f": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:a53ca22639d2": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "fa-wiki-github:a695ecbc17ff": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:a730decdf1ae": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:a95fee9ddcdd": {
+  "label": "tp",
+  "class": "attr:aria-label",
+  "tier": "review"
+ },
+ "fa-wiki-github:aa1fc9ab5ccc": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:ae921af094f0": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:b04757c82f43": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "fa-wiki-github:d559c9f13e59": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:da7e1849f0b1": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "fa-wiki-github:e58429d0dce8": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:f25bfee96416": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "fa-wiki-github:fcb516807bdf": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "he-wiki-github:0f489ac807f6": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:166aff9e8b6e": {
+  "label": "fp",
+  "class": "technical-term",
+  "tier": "review"
+ },
+ "he-wiki-github:1d963d3db4e7": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:25702d780ee5": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:2d8921083112": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "he-wiki-github:40ab5c40ca69": {
+  "label": "fp",
+  "class": "technical-term",
+  "tier": "fail"
+ },
+ "he-wiki-github:5410767f3f52": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:58595cfed83e": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:5a8f8891e913": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:5cea2ab935ff": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "he-wiki-github:68be6798dd97": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:916aaf9a9907": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "he-wiki-github:91c661428c82": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "he-wiki-github:9a05e750b90f": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:9c34ea85388d": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:9d1976b51110": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "he-wiki-github:c04c2ba8e642": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "he-wiki-github:cc480eb4f4a8": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:e1de35adbbce": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "he-wiki-github:f5cda09d24ba": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ja-wiki-github:019a3a7197a8": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ja-wiki-github:054f01a94ef7": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "ja-wiki-github:065f95a39f15": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "ja-wiki-github:1bbb3dc76685": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ja-wiki-github:1efe1cceff2b": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ja-wiki-github:296832a07708": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:29d262399655": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "ja-wiki-github:32bf448b4f64": {
+  "label": "tp",
+  "class": "attr:title",
+  "tier": "fail"
+ },
+ "ja-wiki-github:32e7bebd7433": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:335095a936d8": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "review"
+ },
+ "ja-wiki-github:381eb2eae383": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:39be9b21ba91": {
+  "label": "fp",
+  "class": "name-of-work",
+  "tier": "fail"
+ },
+ "ja-wiki-github:4770d7685795": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:4ab45881c62f": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ja-wiki-github:5eea2115b99b": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ja-wiki-github:63b96880168b": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ja-wiki-github:64a37ac89841": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:6acbc4e136fb": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:6e57415189e7": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ja-wiki-github:784b47e81ea5": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ja-wiki-github:845820f91ab1": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:8bc4c8626777": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ja-wiki-github:abc7eae63a16": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ja-wiki-github:ac1b9be1aec9": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ja-wiki-github:b5017558179b": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:b986f435a830": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:c2b62d90b591": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ja-wiki-github:ccf14122c227": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:e4faed7f26f0": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:ea05298a8cc2": {
+  "label": "fp",
+  "class": "technical-term",
+  "tier": "fail"
+ },
+ "ja-wiki-github:f4df1e7da038": {
+  "label": "tp",
+  "class": "attr-vs-element-lang",
+  "tier": "fail"
+ },
+ "ja-wiki-github:f96768afcd67": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:f97610fae3ce": {
+  "label": "tp",
+  "class": "citation",
+  "tier": "fail"
+ },
+ "ja-wiki-github:fdb51ecab7d5": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ru-wiki-github:1243c8228865": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ru-wiki-github:9d30879deec7": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ },
+ "ru-wiki-github:c9d16ebe129f": {
+  "label": "tp",
+  "class": "text",
+  "tier": "fail"
+ }
+}

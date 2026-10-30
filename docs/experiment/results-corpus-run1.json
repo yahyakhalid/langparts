@@ -1,0 +1,570 @@
+{
+  "corpus": "A (test/corpus)",
+  "files": 10,
+  "totals": {
+    "fails": 42,
+    "failTP": 39,
+    "failFP": 1,
+    "failAny": 2,
+    "failCases": 39,
+    "failCasesFound": 39,
+    "failCasesReviewOnly": 0,
+    "reviews": 11,
+    "reviewTP": 9,
+    "reviewFP": 2,
+    "reviewAny": 0,
+    "reviewCases": 10,
+    "reviewCasesFound": 9,
+    "sameScriptFails": 0,
+    "nameFails": 0,
+    "nameCases": 38,
+    "docLangOK": true
+  },
+  "summary": {
+    "C1_precision": "97.5%",
+    "C2_recall": "100.0%",
+    "C3_nameFails": "0 fails on 38 brand/name cases in Arabic and French pages",
+    "C6_reviewPrecision": "81.8%",
+    "reviewRecall": "90.0%",
+    "C7_sameScriptFails": 0,
+    "missingDocumentLangCorrect": true
+  },
+  "details": [
+    {
+      "file": "ar-mixed-scripts.html",
+      "line": 14,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "ئەم دەروازەیە خزمەتگوزارییەکانی حکومەت بە زمانی کوردی و عەرەبی پێشکەش دەکات، و دەتوانیت لە هەر کاتێکدا سەردانی بکەیت",
+      "case": "ar-ckb-paragraph",
+      "expect": "review",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-mixed-scripts.html",
+      "line": 21,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "این درگاه خدمات دولتی را به زبان‌های مختلف ارائه می‌دهد و شما می‌توانید در هر زمانی از آن استفاده کنید",
+      "case": "ar-fa-paragraph",
+      "expect": "review",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-mixed-scripts.html",
+      "line": 28,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Please bring your passport and a printed copy of your appointment confirmation",
+      "case": "ar-en-sentence-2",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-mixed-scripts.html",
+      "line": 30,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "English version of the portal",
+      "case": "ar-aria-2",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-news.html",
+      "line": 19,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "We will not accept any further delay in these negotiations",
+      "case": "ar-news-quote-1",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-news.html",
+      "line": 32,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Climate finance must reach the communities that need it most, and it must reach them this year",
+      "case": "ar-news-blockquote",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-news.html",
+      "line": 40,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "business as usual",
+      "case": "ar-news-phrase-short",
+      "expect": "any",
+      "verdict": "excluded"
+    },
+    {
+      "file": "ar-news.html",
+      "line": 44,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "World leaders pose for the family photo at the summit venue on Friday",
+      "case": "ar-news-caption",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-news.html",
+      "line": 48,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Read the full story in English",
+      "case": "ar-news-li",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-news.html",
+      "line": 55,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "United States of America and its partners",
+      "case": "ar-news-td",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-news.html",
+      "line": 59,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Print this article",
+      "case": "ar-news-aria",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-news.html",
+      "line": 60,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Open the full archive of climate news",
+      "case": "ar-news-title-attr",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 12,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "About our team",
+      "case": "ar-blog-nav-en",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 14,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Close the navigation menu",
+      "case": "ar-blog-aria",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 15,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Search the documentation",
+      "case": "ar-blog-placeholder",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 55,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Thank you so much, this was the clearest explanation I have read so far",
+      "case": "ar-blog-sentence-1",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 68,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "A man reading a book in the library",
+      "case": "ar-blog-alt",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 76,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Subscribe to the newsletter",
+      "case": "ar-blog-submit",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 77,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Sign in to your account",
+      "case": "ar-blog-button",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 79,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "A small chart showing the growth of the project",
+      "case": "ar-blog-svg-title",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ar-tech-blog.html",
+      "line": 82,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "All rights reserved. Use of this site is subject to our terms and privacy policy",
+      "case": "ar-blog-footer",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 15,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "مرحباً بكم في الجامعة، نتمنى لكم سنة دراسية موفقة",
+      "case": "en-ar-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 21,
+      "severity": "review",
+      "rule": "foreign-script",
+      "text": "المتنبي",
+      "case": "en-ar-name-1",
+      "expect": "none",
+      "verdict": "FP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 22,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "ألف ليلة وليلة",
+      "case": "en-ar-name-2",
+      "expect": "any",
+      "verdict": "excluded"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 25,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "ברוכים הבאים לאוניברסיטה שלנו, אנחנו שמחים שבחרתם בנו",
+      "case": "en-he-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 28,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Добро пожаловать в наш университет, мы рады видеть вас здесь",
+      "case": "en-ru-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 31,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "欢迎来到我们的大学，祝你学习愉快",
+      "case": "en-zh-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 34,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "私たちの大学へようこそ。楽しい一年になりますように",
+      "case": "en-ja-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 37,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "우리 대학교에 오신 것을 환영합니다. 즐거운 한 해 되세요",
+      "case": "en-ko-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 40,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Καλώς ήρθατε στο πανεπιστήμιό μας, σας ευχόμαστε καλή χρονιά",
+      "case": "en-el-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 43,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "हमारे विश्वविद्यालय में आपका स्वागत है, आपका साल शुभ ह",
+      "case": "en-hi-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 46,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "ยินดีต้อนรับสู่มหาวิทยาลัยของเรา ขอให้มีความสุขตลอดป",
+      "case": "en-th-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 49,
+      "severity": "review",
+      "rule": "foreign-script",
+      "text": "北京 , 東京",
+      "case": "en-zh-name",
+      "expect": "none",
+      "verdict": "FP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 61,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "فارسی 中文 עברית",
+      "case": "en-lang-switch-fa",
+      "expect": "none",
+      "verdict": "FP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 65,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "بوابة الجامعة الرئيسية في الصباح الباكر",
+      "case": "en-ar-alt",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "en-multiscript.html",
+      "line": 66,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Закрыть окно с сообщением",
+      "case": "en-ru-aria",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "fa-page.html",
+      "line": 16,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Your registration has been received and will be processed within three working days",
+      "case": "fa-en-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "fa-page.html",
+      "line": 19,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "يرجى من جميع الطلاب الالتزام بالمواعيد المحددة للتسجيل، وذلك لضمان حصولهم على المقاعد المتاحة في الوقت المناسب",
+      "case": "fa-ar-paragraph",
+      "expect": "review",
+      "verdict": "TP"
+    },
+    {
+      "file": "fr-government.html",
+      "line": 9,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "Skip to main content",
+      "case": "fr-aria-skip",
+      "expect": "review",
+      "verdict": "TP"
+    },
+    {
+      "file": "fr-government.html",
+      "line": 11,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "Sign in to your account",
+      "case": "fr-aria-signin",
+      "expect": "review",
+      "verdict": "TP"
+    },
+    {
+      "file": "fr-government.html",
+      "line": 33,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "Applications submitted after the deadline will be reviewed in the order they are received, and you will be notified by mail once a decision has been made",
+      "case": "fr-en-paragraph",
+      "expect": "review",
+      "verdict": "TP"
+    },
+    {
+      "file": "fr-government.html",
+      "line": 40,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "يمكنكم تقديم الطلب عبر الإنترنت أو عبر الهاتف أو في أحد مكاتبنا",
+      "case": "fr-ar-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "fr-government.html",
+      "line": 44,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "Read more about how to apply for the program",
+      "case": "fr-en-link",
+      "expect": "review",
+      "verdict": "TP"
+    },
+    {
+      "file": "fr-government.html",
+      "line": 52,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "Map of the office locations in the province",
+      "case": "fr-en-alt",
+      "expect": "review",
+      "verdict": "TP"
+    },
+    {
+      "file": "fr-government.html",
+      "case": "fr-en-placeholder",
+      "expect": "review",
+      "verdict": "MISSED"
+    },
+    {
+      "file": "he-portal.html",
+      "line": 15,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "The service will be unavailable on Sunday night because of planned maintenance",
+      "case": "he-en-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "he-portal.html",
+      "line": 18,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "يمكنكم الحصول على الخدمة باللغة العربية من خلال مركز الاتصال",
+      "case": "he-ar-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "he-portal.html",
+      "line": 20,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Contact the help desk by phone",
+      "case": "he-aria",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ja-shop.html",
+      "line": 22,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "This is the best online store I have ever used, and the delivery was very fast",
+      "case": "ja-en-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ja-shop.html",
+      "line": 25,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "주문하신 상품은 내일 발송될 예정입니다",
+      "case": "ja-ko-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ja-shop.html",
+      "line": 31,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "Add this item to your shopping cart",
+      "case": "ja-aria",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "no-lang.html",
+      "line": 10,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "مرحباً بكم جميعاً في موقعنا الجديد هذا الأسبوع",
+      "case": "nolang-inner-fail",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ru-news.html",
+      "line": 17,
+      "severity": "fail",
+      "rule": "foreign-script",
+      "text": "We are excited to share the biggest update of the year with our community",
+      "case": "ru-en-sentence",
+      "expect": "fail",
+      "verdict": "TP"
+    },
+    {
+      "file": "ru-news.html",
+      "line": 20,
+      "severity": "review",
+      "rule": "language-mismatch",
+      "text": "Ми раді повідомити, що нова версія вже доступна для всіх користувачів у нашому магазині застосунків, і вона містить багато виправлень",
+      "case": "ru-uk-paragraph",
+      "expect": "review",
+      "verdict": "TP"
+    }
+  ]
+}
