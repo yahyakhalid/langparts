@@ -11,7 +11,7 @@ const RULES = [
     fullDescription: { text: 'A passage is written in a script the declared language does not use (for example English in an Arabic page) and has no lang attribute, so screen readers pronounce it with the wrong language rules. WCAG 2.x Success Criterion 3.1.2 Language of Parts.' },
     helpUri: 'https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html',
     defaultConfiguration: { level: 'error' },
-    properties: { tags: ['accessibility', 'wcag2a', 'wcag312'], precision: 'high' },
+    properties: { tags: ['accessibility', 'wcag2aa', 'wcag312'], precision: 'high' },
   },
   {
     id: 'language-mismatch',
@@ -20,7 +20,7 @@ const RULES = [
     fullDescription: { text: 'A passage looks like a different language that uses the same script as the declared language (for example English in a French page). This is a hint for review, not a confirmed failure. WCAG 2.x Success Criterion 3.1.2 Language of Parts.' },
     helpUri: 'https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html',
     defaultConfiguration: { level: 'warning' },
-    properties: { tags: ['accessibility', 'wcag2a', 'wcag312'], precision: 'medium' },
+    properties: { tags: ['accessibility', 'wcag2aa', 'wcag312'], precision: 'medium' },
   },
   {
     id: 'missing-document-lang',

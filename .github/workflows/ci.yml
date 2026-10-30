@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: CLI smoke test on the examples
+        shell: bash
+        run: |
+          set +e
+          node bin/langparts.js examples --json > out.json
+          code=$?
+          set -e
+          test "$code" = "1"
+          node -e "const s=require('./out.json').summary; if (s.fails !== 6 || s.reviews !== 1) { console.error(s); process.exit(1) }"
+
+  action:
+    name: Composite action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          paths: examples
+          fail-on: none
+          sarif: langparts.sarif
+      - name: SARIF was written
+        run: node -e "const s=require('./langparts.sarif'); if (s.version !== '2.1.0' || s.runs[0].results.length !== 7) process.exit(1)"

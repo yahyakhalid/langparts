@@ -1,0 +1,48 @@
+# Copy to .github/workflows/langparts.yml in your repository.
+# Checks the built HTML for passages in another language without a lang
+# attribute, and shows the results in the Security tab (code scanning).
+name: Language of parts
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  langparts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write   # only needed for the SARIF upload
+    steps:
+      - uses: actions/checkout@v4
+
+      # Build your site first if the HTML is generated, for example:
+      # - run: npm ci && npm run build
+
+      - name: Check language of parts
+        uses: yahyakhalid/langparts@main   # pin to a commit SHA or release tag for real use
+        with:
+          paths: site
+          fail-on: fail
+          sarif: langparts.sarif
+
+      - name: Upload results to code scanning
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: langparts.sarif
+          category: langparts
+
+  # Without the action: run the CLI directly.
+  langparts-cli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx --yes github:yahyakhalid/langparts site --fail-on fail

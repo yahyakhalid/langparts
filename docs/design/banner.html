@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>langparts banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #15122b;     /* deep indigo, like a dimmed screen */
+    --night-2: #211c40;
+    --rule: #3b3470;
+    --paper: #f4f1ff;
+    --muted: #b7b0dc;
+    --signal: #ffd23f;    /* the flagged passage: high-contrast amber */
+    --ok: #7ee0c3;        /* tagged text */
+    --wave: #8f7cff;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 1280px; height: 640px; background: var(--night); color: var(--paper); font-family: 'Atkinson Hyperlegible', sans-serif; overflow: hidden; position: relative; }
+  .frame { position: absolute; inset: 0; padding: 60px 72px; display: grid; grid-template-columns: 1fr 560px; gap: 56px; align-items: center; }
+  .name { font: 600 84px/0.95 'IBM Plex Mono', monospace; letter-spacing: -3px; }
+  .name b { color: var(--signal); font-weight: 600; }
+  .tag { margin-top: 26px; font-size: 31px; line-height: 1.32; max-width: 560px; }
+  .sub { margin-top: 18px; font-size: 21px; color: var(--muted); line-height: 1.45; max-width: 560px; }
+  .wcag { display: inline-block; margin-top: 30px; font: 600 18px 'IBM Plex Mono', monospace; color: var(--night); background: var(--signal); padding: 7px 14px; border-radius: 6px; }
+
+  .card { background: var(--night-2); border: 1px solid var(--rule); border-radius: 18px; padding: 26px 28px 24px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+  .label { font: 500 15px 'IBM Plex Mono', monospace; color: var(--muted); display: flex; justify-content: space-between; margin-bottom: 14px; }
+  .ar { direction: rtl; font: 500 27px/1.85 'IBM Plex Sans Arabic', sans-serif; }
+  .flag { direction: ltr; unicode-bidi: isolate; font-family: 'Atkinson Hyperlegible', sans-serif; font-size: 24px; background: rgba(255,210,63,.16); border-bottom: 3px solid var(--signal); padding: 0 4px; border-radius: 3px; }
+  .okspan { direction: ltr; unicode-bidi: isolate; font-family: 'Atkinson Hyperlegible', sans-serif; font-size: 24px; border-bottom: 3px dotted var(--ok); padding: 0 2px; }
+  .wave { display: flex; gap: 4px; align-items: center; height: 46px; margin: 18px 0 16px; }
+  .wave i { display: block; width: 6px; border-radius: 3px; background: var(--wave); }
+  .wave i.bad { background: var(--signal); }
+  .finding { font: 500 17px/1.6 'IBM Plex Mono', monospace; border-top: 1px dashed var(--rule); padding-top: 14px; }
+  .finding .sev { color: var(--signal); font-weight: 600; }
+  .finding .fix { color: var(--ok); }
+  .finding .dim { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div>
+    <div class="name">lang<b>parts</b></div>
+    <p class="tag">Find the passages a screen reader will read in the wrong language.</p>
+    <p class="sub">English inside an Arabic page, Arabic inside an English one, an English aria-label on a French site: found in CI, with the fix.</p>
+    <span class="wcag">WCAG 2.x · SC 3.1.2 Language of Parts</span>
+  </div>
+  <div class="card">
+    <div class="label"><span>&lt;p&gt; in a page with lang="ar"</span><span>screen reader: Arabic voice</span></div>
+    <p class="ar">ملاحظة للزوار: <span class="flag">Please bring your passport</span> ونسخة من الموعد. ويقول الدليل <span class="okspan" lang="en">keep it ready</span>.</p>
+    <div class="wave" aria-hidden="true" id="wave"></div>
+    <div class="finding">
+      <div><span class="sev">✖ fail</span> English (Latin script) text in &lt;p&gt;</div>
+      <div class="dim">"Please bring your passport"</div>
+      <div class="fix">fix: &lt;span lang="en"&gt;…&lt;/span&gt;</div>
+    </div>
+  </div>
+</div>
+<script>
+  // A fixed, decorative waveform; the amber bars are the mispronounced part.
+  const h = [10,18,26,14,30,22,12,26,34,20,14,28,38,44,40,46,36,42,30,16,24,12,20,28,18,10,22,30,16,12,24,18,10,14,20,12];
+  const wave = document.getElementById('wave');
+  h.forEach((v, i) => { const b = document.createElement('i'); b.style.height = v + 'px'; if (i >= 11 && i <= 19) b.className = 'bad'; wave.appendChild(b); });
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>langparts banner (Arabic)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #15122b;
+    --night-2: #211c40;
+    --rule: #3b3470;
+    --paper: #f4f1ff;
+    --muted: #b7b0dc;
+    --signal: #ffd23f;
+    --ok: #7ee0c3;
+    --wave: #8f7cff;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 1280px; height: 640px; background: var(--night); color: var(--paper); font-family: 'IBM Plex Sans Arabic', sans-serif; overflow: hidden; }
+  .frame { position: absolute; inset: 0; padding: 60px 72px; display: grid; grid-template-columns: 1fr 560px; gap: 56px; align-items: center; }
+  .name { direction: ltr; text-align: right; font: 600 84px/0.95 'IBM Plex Mono', monospace; letter-spacing: -3px; }
+  .name b { color: var(--signal); font-weight: 600; }
+  .tag { margin-top: 26px; font-size: 34px; font-weight: 600; line-height: 1.5; max-width: 580px; }
+  .sub { margin-top: 14px; font-size: 22px; color: var(--muted); line-height: 1.7; max-width: 580px; }
+  .wcag { display: inline-block; margin-top: 24px; font: 600 19px 'IBM Plex Sans Arabic', sans-serif; color: var(--night); background: var(--signal); padding: 6px 16px; border-radius: 6px; }
+  .wcag bdi { font-family: 'IBM Plex Mono', monospace; font-size: 17px; }
+
+  .card { background: var(--night-2); border: 1px solid var(--rule); border-radius: 18px; padding: 26px 28px 24px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+  .label { font: 500 16px 'IBM Plex Sans Arabic', sans-serif; color: var(--muted); display: flex; justify-content: space-between; margin-bottom: 14px; }
+  .label bdi { font-family: 'IBM Plex Mono', monospace; font-size: 15px; }
+  .ar { font: 500 27px/1.85 'IBM Plex Sans Arabic', sans-serif; }
+  .flag { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: 24px; background: rgba(255,210,63,.16); border-bottom: 3px solid var(--signal); padding: 0 4px; border-radius: 3px; }
+  .okspan { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: 24px; border-bottom: 3px dotted var(--ok); padding: 0 2px; }
+  .wave { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; align-items: center; height: 46px; margin: 18px 0 16px; direction: ltr; }
+  .wave i { display: block; width: 6px; border-radius: 3px; background: var(--wave); }
+  .wave i.bad { background: var(--signal); }
+  .finding { font: 500 18px/1.7 'IBM Plex Sans Arabic', sans-serif; border-top: 1px dashed var(--rule); padding-top: 14px; }
+  .finding .sev { color: var(--signal); font-weight: 700; }
+  .finding .code { direction: ltr; unicode-bidi: isolate; font-family: 'IBM Plex Mono', monospace; font-size: 16px; }
+  .finding .fix { color: var(--ok); }
+  .finding .dim { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div>
+    <div class="name">lang<b>parts</b></div>
+    <p class="tag">اكتشف المقاطع التي سيقرؤها قارئ الشاشة بلغة غير لغتها.</p>
+    <p class="sub">جملة إنجليزية داخل صفحة عربية، أو نص عربي في صفحة إنجليزية، أو وصف <bdi>aria-label</bdi> إنجليزي في موقع فرنسي: تكتشفها الأداة في CI وتقترح الإصلاح.</p>
+    <span class="wcag">معيار <bdi>WCAG 3.1.2</bdi>: لغة الأجزاء</span>
+  </div>
+  <div class="card">
+    <div class="label"><span>فقرة في صفحة <bdi>lang="ar"</bdi></span><span>قارئ الشاشة: صوت عربي</span></div>
+    <p class="ar">ملاحظة للزوار: <bdi class="flag">Please bring your passport</bdi> ونسخة من الموعد. ويقول الدليل <bdi class="okspan" lang="en">keep it ready</bdi>.</p>
+    <div class="wave" aria-hidden="true" id="wave"></div>
+    <div class="finding">
+      <div><span class="sev">✖ فشل</span> نص إنجليزي (حروف لاتينية) داخل <bdi class="code">&lt;p&gt;</bdi></div>
+      <div class="dim"><bdi>"Please bring your passport"</bdi></div>
+      <div class="fix">الإصلاح: <bdi class="code">&lt;span lang="en"&gt;…&lt;/span&gt;</bdi></div>
+    </div>
+  </div>
+</div>
+<script>
+  const h = [10,18,26,14,30,22,12,26,34,20,14,28,38,44,40,46,36,42,30,16,24,12,20,28,18,10,22,30,16,12,24,18,10,14,20,12];
+  const wave = document.getElementById('wave');
+  h.forEach((v, i) => { const b = document.createElement('i'); b.style.height = v + 'px'; if (i >= 11 && i <= 19) b.className = 'bad'; wave.appendChild(b); });
+</script>
+</body>
+</html>

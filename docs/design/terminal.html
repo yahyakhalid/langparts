@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>langparts terminal output</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 1280px; background: #15122b; padding: 36px; font-family: 'IBM Plex Mono', 'IBM Plex Sans Arabic', monospace; }
+  .win { background: #0d0b1c; border: 1px solid #3b3470; border-radius: 14px; overflow: hidden; }
+  .bar { background: #211c40; padding: 12px 16px; display: flex; gap: 8px; align-items: center; color: #b7b0dc; font-size: 14px; }
+  .bar i { width: 12px; height: 12px; border-radius: 50%; background: #3b3470; display: inline-block; }
+  .bar span { margin-left: 12px; }
+  .term { padding: 18px 22px 22px; color: #e9e6fb; font-size: 17px; line-height: 1.55; }
+  .l { white-space: pre; direction: ltr; unicode-bidi: embed; text-align: left; }
+  .prompt { color: #7ee0c3; }
+  .b { font-weight: 600; color: #ffffff; }
+  .dim { color: #8d86b8; }
+  .red { color: #ff6b7a; font-weight: 600; }
+  .yellow { color: #ffd23f; font-weight: 600; }
+  .green { color: #7ee0c3; font-weight: 600; }
+  .cyan { color: #7ee0c3; }
+</style>
+</head>
+<body>
+<div class="win">
+  <div class="bar"><i></i><i></i><i></i><span>bash</span></div>
+  <div class="term">
+<div class="l"><span class="prompt">$</span> npx github:yahyakhalid/langparts examples/ar-page.html examples/fr-page.html</div>
+<div class="l">&nbsp;</div>
+<div class="l"><span class="b">examples/ar-page.html</span> <span class="dim">(lang="ar")</span></div>
+<div class="l">  <span class="dim">10:11   </span><span class="red b">✖ fail  </span>  English (Latin script) aria-label on &lt;button&gt;, which is declared as Arabic (lang="ar").</div>
+<div class="l">                    <span class="b">"Open the main menu"</span></div>
+<div class="l">                    <span class="dim">at body &gt; header &gt; button [aria-label]</span></div>
+<div class="l">                    <span class="cyan">fix: Translate the aria-label into Arabic, or add lang="en" to the &lt;button&gt; element.</span></div>
+<div class="l">  <span class="dim">19:28   </span><span class="red b">✖ fail  </span>  English (Latin script) text in &lt;p&gt;, which is declared as Arabic (lang="ar").</div>
+<div class="l">                    <span class="b">"Please bring your passport and a printed copy of your appointment confirmation"</span></div>
+<div class="l">                    <span class="dim">at body &gt; main &gt; p:nth-of-type(2)</span></div>
+<div class="l">                    <span class="cyan">fix: &lt;span lang="en"&gt;Please bring your passport and a printed copy of your appoin…&lt;/span&gt;</span></div>
+<div class="l">  <span class="dim">24:25   </span><span class="red b">✖ fail  </span>  English (Latin script) alt on &lt;img&gt;, which is declared as Arabic (lang="ar").</div>
+<div class="l">                    <span class="b">"Staff helping a visitor at the service counter"</span></div>
+<div class="l">                    <span class="dim">at body &gt; main &gt; img [alt]</span></div>
+<div class="l">                    <span class="cyan">fix: Translate the alt into Arabic, or add lang="en" to the &lt;img&gt; element.</span></div>
+<div class="l">  <span class="dim">25:20   </span><span class="red b">✖ fail  </span>  English (Latin script) text in &lt;a&gt;, which is declared as Arabic (lang="ar").</div>
+<div class="l">                    <span class="b">"Read this page in English"</span></div>
+<div class="l">                    <span class="dim">at body &gt; main &gt; p:nth-of-type(4) &gt; a</span></div>
+<div class="l">                    <span class="cyan">fix: &lt;a lang="en"&gt;</span></div>
+<div class="l">&nbsp;</div>
+<div class="l"><span class="b">examples/fr-page.html</span> <span class="dim">(lang="fr")</span></div>
+<div class="l">  <span class="dim">8:20    </span><span class="yellow b">⚠ review</span>  The aria-label on &lt;a&gt; looks like English, but the element is declared as French (lang="fr").</div>
+<div class="l">                    <span class="b">"Skip to main content"</span></div>
+<div class="l">                    <span class="dim">at body &gt; a [aria-label]</span></div>
+<div class="l">                    <span class="cyan">fix: Translate the aria-label into French.</span></div>
+<div class="l">  <span class="dim">14:29   </span><span class="red b">✖ fail  </span>  Arabic text in &lt;p&gt;, which is declared as French (lang="fr").</div>
+<div class="l">                    <span class="b">"يمكنكم تقديم الطلب عبر الإنترنت أو في أحد مكاتبنا"</span></div>
+<div class="l">                    <span class="dim">at main#contenu &gt; p:nth-of-type(4)</span></div>
+<div class="l">                    <span class="cyan">fix: &lt;span lang="ar"&gt;يمكنكم تقديم الطلب عبر الإنترنت أو في أحد مكاتبنا&lt;/span&gt;</span></div>
+<div class="l">&nbsp;</div>
+<div class="l"><span class="red b">5 fails</span>, <span class="yellow b">1 to review</span> in 2 files</div>
+<div class="l"><span class="prompt">$</span> echo $?</div>
+<div class="l">1</div>
+  </div>
+</div>
+</body>
+</html>

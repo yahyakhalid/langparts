@@ -1,0 +1,6 @@
+{
+  "lang": "ar",
+  "minWords": 3,
+  "ignore": ["Service Canada", "the quick sync tool"],
+  "failOn": "fail"
+}

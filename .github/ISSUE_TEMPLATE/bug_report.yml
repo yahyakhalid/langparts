@@ -1,0 +1,39 @@
+name: Bug report
+description: langparts crashed, gave a wrong position or selector, or the CLI misbehaved.
+labels: [bug]
+body:
+  - type: textarea
+    id: input
+    attributes:
+      label: Input
+      description: The smallest HTML that shows the problem, or a public URL.
+      render: html
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or code
+      placeholder: npx github:yahyakhalid/langparts page.html --json
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: langparts version, Node.js version and OS
+      placeholder: langparts 0.1.0, Node 22.11, Windows 11
+    validations:
+      required: true

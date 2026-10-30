@@ -1,0 +1,40 @@
+name: False positive or missed passage
+description: langparts reported something WCAG allows (a name, a term), or missed untagged text in another language.
+labels: [accuracy]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What went wrong?
+      options:
+        - Reported, but it is a name, brand, technical term or allowed word (false positive)
+        - Reported as fail, but it should only be a review
+        - Not reported, but it is a passage in another language (missed)
+        - Wrong language guess or wrong suggested fix
+    validations:
+      required: true
+  - type: textarea
+    id: html
+    attributes:
+      label: HTML
+      description: The element and its surroundings, including the lang attributes that apply.
+      render: html
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: The finding (from --json), if any
+      render: json
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it is wrong
+      description: For example "Visual Studio Code is a product name" or "this is a full English sentence in an Arabic page".
+    validations:
+      required: true
+  - type: input
+    id: languages
+    attributes:
+      label: Page language and the language of the passage
+      placeholder: Page Arabic (ar), passage English

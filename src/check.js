@@ -166,12 +166,16 @@ function makeFinding(f, ctx) {
   } else {
     fix = `<span lang="${tag}">${text}</span>`;
   }
-  const probably = detectedLang ? `, probably ${languageName(detectedLang)},` : '';
   let message;
   if (f.rule === 'foreign-script') {
+    // "English text (Latin script)", "Arabic text", or "Latin-script text" when unsure.
+    const name = detectedLang ? languageName(detectedLang) : '';
+    const what = !name ? scriptName(detectedScript)
+      : name === detectedScript ? name
+        : `${name} (${scriptName(detectedScript).replace(/-script$/, ' script')})`;
     message = block.kind === 'attr'
-      ? `${scriptName(detectedScript)} ${block.attribute}${probably} on <${elTag}>, which is declared as ${describeLang(lang)}.`
-      : `${scriptName(detectedScript)} text${probably} in <${elTag}>, which is declared as ${describeLang(lang)}.`;
+      ? `${what} ${block.attribute} on <${elTag}>, which is declared as ${describeLang(lang)}.`
+      : `${what} text in <${elTag}>, which is declared as ${describeLang(lang)}.`;
     if (f.severity === 'review') message += ' Short: a name, or untranslated text?';
   } else {
     const looks = detectedLang ? languageName(detectedLang) : 'another language';

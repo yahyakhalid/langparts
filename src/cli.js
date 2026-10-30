@@ -318,7 +318,9 @@ export function formatHuman(results, { color, fails, reviews }) {
       const text = safe(f.text);
       if (text) out += `${pad}${bold(`"${text.length > 100 ? `${text.slice(0, 99)}…` : text}"`)}\n`;
       out += `${pad}${dim(`at ${safe(f.selector)}${f.attribute ? ` [${f.attribute}]` : ''}`)}\n`;
-      out += `${pad}${cyan(`fix: ${safe(f.fix)}`)}\n`;
+      // A long passage makes the suggested <span> unreadable; --json has it in full.
+      const fix = safe(f.fix).replace(/^(<span lang="[^"]*">)(.{70,})(<\/span>)$/u, (_, a, t, b) => `${a}${t.slice(0, 60)}…${b}`);
+      out += `${pad}${cyan(`fix: ${fix}`)}\n`;
     }
   }
   const files = results.length;
